@@ -1,0 +1,2 @@
+# Create-a-Blob-storage-resources-with-the-.NET-client-library.
+This project, we create an Azure Storage account and build a .NET console application using the Azure Storage Blob client library to create containers, upload files to blob storage, list blobs, and download files. Also authenticate with Azure, perform blob storage operations programmatically, and verify content results in the Azure portal.
