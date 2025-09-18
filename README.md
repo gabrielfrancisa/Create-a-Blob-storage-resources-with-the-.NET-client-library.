@@ -133,8 +133,6 @@ Console.ReadLine();
 
 async Task ProcessAsync()
 {
-   
-
 // Create a credential using DefaultAzureCredential with configured options
 string accountName = "YOUR_ACCOUNT_NAME"; // Replace with your storage account name
 
@@ -144,7 +142,6 @@ DefaultAzureCredential credential = new DefaultAzureCredential(options);
 // Create the BlobServiceClient using the endpoint and DefaultAzureCredential
 string blobServiceEndpoint = $"https://{accountName}.blob.core.windows.net";
 BlobServiceClient blobServiceClient = new BlobServiceClient(new Uri(blobServiceEndpoint), credential);
-
 
 // Create a unique name for the container
 string containerName = "wtblob" + Guid.NewGuid().ToString();
@@ -176,7 +173,6 @@ string localFilePath = Path.Combine(localPath, fileName);
 await File.WriteAllTextAsync(localFilePath, "Hello, World!");
 Console.WriteLine("Local file created, press 'Enter' to continue.");
 Console.ReadLine();
-
 
 // Get a reference to the blob and upload the file
 BlobClient blobClient = containerClient.GetBlobClient(fileName);
@@ -232,11 +228,12 @@ Console.WriteLine("Blob downloaded successfully to: {0}", downloadFilePath);
 
 ```
 >>> az login
-You must sign into Azure - even though the cloud shell session is already authenticated.
+
+You must sign in to Azure, even though the cloud shell session is already authenticated.
 
 Note: In most scenarios, just using az login will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the --tenant parameter. See Sign into Azure interactively using Azure CLI for details.
 
-Run the following command to start the console app. The app will pause many times during execution waiting for you to press any key to continue. This gives you an opportunity to view the messages in the Azure portal.
+Run the following command to start the console app. The app will pause many times during execution, waiting for you to press any key to continue. This allows you to view the messages in the Azure portal.
 
 #BASH
 >> dotnet run
@@ -250,7 +247,7 @@ Run the two commands below to change into the data directory and list the files 
 
 #BASH 
 >> cd data
->> ls
+> ls
 
 Clean up resources
 At the end of this project, you should delete the cloud resources you created to avoid unnecessary resource usage.
@@ -262,4 +259,4 @@ Enter the resource group name and confirm that you want to delete it.
 
 NOTE: Deleting a resource group deletes all resources contained within it. If you chose an existing resource group for this exercise, any existing resources outside the scope of this exercise will also be deleted.
 
-Congratulations, this is the end of our mini project.
+Congratulations, this is the end of our mini-project.
