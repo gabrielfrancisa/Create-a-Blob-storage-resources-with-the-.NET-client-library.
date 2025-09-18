@@ -108,7 +108,7 @@ Add the starter code for the project
 Run the following command in the cloud shell to begin editing the application.
 
 csharp code area
-```
+
 code Program.cs
 Replace any existing contents with the following code. Be sure to review the comments in the code.
 
