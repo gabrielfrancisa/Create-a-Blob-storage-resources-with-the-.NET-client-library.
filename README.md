@@ -107,6 +107,7 @@ Now it's time to add the code for the project.
 Add the starter code for the project
 Run the following command in the cloud shell to begin editing the application.
 
+```
 csharp code area
 
 code Program.cs
@@ -134,7 +135,7 @@ Console.ReadLine();
 async Task ProcessAsync()
 {
     // Create a credential using DefaultAzureCredential with configured options
-    // ⚠️ REPLACE THE VALUE BELOW WITH YOUR ACTUAL STORAGE ACCOUNT NAME
+    // REPLACE THE VALUE BELOW WITH YOUR ACTUAL STORAGE ACCOUNT NAME
     string accountName = "REPLACE_WITH_YOUR_STORAGE_ACCOUNT_NAME"; // e.g. "mystorage123"
 
     // Use the DefaultAzureCredential with the options configured at the top of the program
@@ -225,8 +226,10 @@ async Task ProcessAsync()
 
     Console.WriteLine("Blob downloaded successfully to: {0}", downloadFilePath);
 }
-
 ```
+
+
+
 >>> az login
 
 You must sign in to Azure, even though the cloud shell session is already authenticated.
