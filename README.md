@@ -237,6 +237,7 @@ Run the following command to start the console app. The app will pause many time
 
 #BASH
 >> dotnet run
+
 In the Azure portal, navigate to the Azure Storage account you created.
 
 Expand > Data storage in the left navigation and select Containers.
@@ -247,7 +248,8 @@ Run the two commands below to change into the data directory and list the files 
 
 #BASH 
 >> cd data
-> ls
+
+ >> ls
 
 Clean up resources
 At the end of this project, you should delete the cloud resources you created to avoid unnecessary resource usage.
